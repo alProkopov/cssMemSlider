@@ -138,7 +138,9 @@ body {
   width: 25%;
   float: left;
   height: 100%;
+
   border-radius: 5%;
+  border-bottom: 50px;
   display: flex;
 
 }
@@ -170,7 +172,7 @@ body {
 }
 
 .slide4 {
-  background-image: url(/assets/covid-cat.jpg);
+  background-image: url(/assets/covid-cat1.jpg);
 }
 
 /* controls */
@@ -230,7 +232,36 @@ body {
     border-radius: 50px;
     background-repeat: no-repeat;
     background-size: cover;
-  
     margin: auto;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .controls{
+    margin: 20px auto;
+    padding: 0;
+    justify-content:center;
+    top: -70px;
+  }
+  .overflow_container{
+
+  }
+
+  .slide_text{
+
+  }
+
+  .slide{
+    background-position: center;
+    height: 100%;
+    border-radius: 50px;
+    
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+  }
+
+  .inner-container {
+    height: 63vw;
   }
 }
