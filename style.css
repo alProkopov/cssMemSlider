@@ -79,8 +79,11 @@ h6 {
 }
 /*--------------------*/
 
+body {
+  background-color: #202325;
+}
 .slider {
-  width: 720px;
+  width: 700px;
   margin: 0 auto;
   max-width: 100%;
 }
@@ -94,44 +97,61 @@ h6 {
 
 .slides {
   position: relative;
-  padding: 50px;
-  background-color: bisque;
+
+  padding-top: 50px;
+  background-color: #202325;
+  /* overflow: hidden; */
 }
 
 .overflow_container {
   width: 100%;
+  padding-bottom: 40px;
   overflow: hidden;
 }
 
-.slide1:checked {
+#slide1:checked ~ .slides .inner-container {
   margin-left: 0;
 }
 
-.slide2:checked {
+#slide2:checked ~ .slides .inner-container {
   margin-left: -100%;
 }
 
-.slide3:checked {
+#slide3:checked ~ .slides .inner-container {
   margin-left: -200%;
 }
 
-.slide4:checked {
+#slide4:checked ~ .slides .inner-container {
   margin-left: -300%;
 }
 
 .inner-container {
   width: 400%;
-  transition: margin-left 500ms;
+  transition: 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  /* transition: margin-left 500ms; */
   height: 480px;
-  border: 5px solid black;
 }
 
 .slide {
   width: 25%;
   float: left;
   height: 100%;
+  border-radius: 5%;
+  display: flex;
 }
-
+.slide_text {
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+  font-size: 20px;
+  align-self: flex-end;
+  position: relative;
+  bottom: -40px;
+  z-index: 1000;
+  /* text-indent:-9999px; */
+  float: right;
+  /* overflow: visible; */
+}
 .slide1 {
   background-image: url(/assets/privet.jpg);
   background-repeat: no-repeat;
@@ -147,4 +167,38 @@ h6 {
 
 .slide4 {
   background-image: url(/assets/covid-cat.jpg);
+}
+
+/* controls */
+
+.controls {
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  /* display: flex; */
+  justify-content: flex-end;
+  position: relative;
+  top: -20px;
+}
+
+.controls label{
+
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #71abfe;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.controls label:hover {
+  background-color: #fff;
+}
+
+#slide1:checked ~ .controls label:nth-child(1),
+#slide2:checked ~ .controls label:nth-child(2),
+#slide3:checked ~ .controls label:nth-child(3),
+#slide4:checked ~ .controls label:nth-child(4) {
+  background: none;
+  border:2px solid #71abfe;
 }
