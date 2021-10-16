@@ -198,11 +198,28 @@ body {
   background-color: #71abfe;
   border-radius: 50%;
   cursor: pointer;
+
 }
+
+.controls label::before{
+  display: block;
+  content : '';
+  width: 35px;
+  height: 35px;
+  background-color:none;
+  position: relative;
+  top: -50%;
+  left: -20%;
+}
+
 
 .controls label:hover {
   background-color: #fff;
 }
+
+
+
+
 
 #slide1:checked ~ .controls label:nth-child(1),
 #slide2:checked ~ .controls label:nth-child(2),
@@ -210,6 +227,7 @@ body {
 #slide4:checked ~ .controls label:nth-child(4) {
   background: none;
   border: 2px solid #71abfe;
+
 }
 
 @media screen and (max-width: 640px) {
@@ -247,15 +265,13 @@ body {
 
   }
 
-  .slide_text{
 
-  }
 
   .slide{
     background-position: center;
     height: 100%;
     border-radius: 50px;
-    
+
     background-repeat: no-repeat;
     background-size: contain;
     margin: auto;
