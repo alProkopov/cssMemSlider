@@ -237,10 +237,10 @@ body {
     margin: 20px auto;
     padding: 0;
     justify-content:center;
-    top: -70px;
+    top: -100px;
   }
   .overflow_container{
-    padding-bottom: 70px;
+    padding-bottom: 100px;
   }
 
   .slide_text{
@@ -257,13 +257,6 @@ body {
 }
 
 @media screen and (max-width: 530px) {
-  .controls{
-    margin: 20px auto;
-    padding: 0;
-    justify-content:center;
-    top: -70px;
-  }
-
   .slide{
     background-position: center;
     height: 100%;
@@ -276,5 +269,12 @@ body {
 
   .inner-container {
     height: 63vw;
+  }
+}
+
+@media screen and (max-width: 505px) {
+
+  .slide_text{
+    bottom: -90px
   }
 }
