@@ -158,21 +158,21 @@ body {
   /* overflow: visible; */
 }
 .slide1 {
-  background-image: url(/assets/privet.jpg);
+  background-image: url(assets/privet.jpg);
   background-repeat: no-repeat;
 }
 
 
 .slide2 {
-  background-image: url(/assets/cotayutsa.jpg);
+  background-image: url(assets/cotayutsa.jpg);
 }
 
 .slide3 {
-  background-image: url(/assets/oleg.jpg);
+  background-image: url(assets/oleg.jpg);
 }
 
 .slide4 {
-  background-image: url(/assets/covid-cat1.jpg);
+  background-image: url(assets/covid-cat1.jpg);
 }
 
 /* controls */
